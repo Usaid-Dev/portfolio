@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constant/constants.dart';
 import '../data/data.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,6 +36,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Center(
+                child: Text(
+              name,
+              style: kTitleText,
+            )),
+            Center(
+                child: Text(
+              "@$username",
+              style: kSubTitleText,
+            )),
           ],
         ),
       ),
