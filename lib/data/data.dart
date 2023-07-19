@@ -27,8 +27,6 @@ People of the World! I'm Usaid, an experienced software developer specializing i
 ''';
 
 String location = "Karachi, Pakistan";
-String website = "";
-String portfolio = "";
 String email = "usaidasif12@gmail.com";
 
 List<Project> projectList = [
