@@ -76,29 +76,30 @@ class HomeScreen extends StatelessWidget {
                   width: 10,
                 ),
                 ElevatedButton(
-                    onPressed: () async {
-                      final Uri emailLaunchUri = Uri(
-                        scheme: 'mailto',
-                        path: contactEmail,
-                      );
-                      await launchUrl(emailLaunchUri);
-                    },
-                    child: Row(
-                      children: [
-                        const Icon(
-                          Icons.mail,
-                          size: 16,
-                          color: Colors.white,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "Mail Me",
-                          style: kSubTitleText.copyWith(color: Colors.white),
-                        )
-                      ],
-                    ))
+                  onPressed: () async {
+                    final Uri emailLaunchUri = Uri(
+                      scheme: 'mailto',
+                      path: contactEmail,
+                    );
+                    await launchUrl(emailLaunchUri);
+                  },
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail,
+                        size: 16,
+                        color: Colors.white,
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Mail Me",
+                        style: kSubTitleText.copyWith(color: Colors.white),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
             const SizedBox(
@@ -143,56 +144,57 @@ class HomeScreen extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 40),
                                     child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            "Location",
-                                            style: kSubTitleText,
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Row(
-                                            children: [
-                                              const Icon(
-                                                Icons.circle,
-                                                size: 16,
-                                              ),
-                                              const SizedBox(
-                                                width: 5,
-                                              ),
-                                              Text(
-                                                location,
-                                              )
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Text(
-                                            "Email",
-                                            style: kSubTitleText,
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Text(email),
-                                              const SizedBox(
-                                                width: 5,
-                                              ),
-                                              const Icon(
-                                                Icons.launch,
-                                                size: 16,
-                                              )
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                        ]),
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Location",
+                                          style: kSubTitleText,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.location_pin,
+                                              size: 16,
+                                            ),
+                                            const SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              location,
+                                            )
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "Email",
+                                          style: kSubTitleText,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(email),
+                                            const SizedBox(
+                                              width: 5,
+                                            ),
+                                            const Icon(
+                                              Icons.launch,
+                                              size: 16,
+                                            )
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 )
                               ],
@@ -227,7 +229,9 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.white,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 20, horizontal: 40),
+                                    vertical: 20,
+                                    horizontal: 40,
+                                  ),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -284,6 +288,125 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Column(
+              children: [
+                Card(
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            "Connect With Me",
+                            style: kTitleText,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(instagramLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Instagram",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(facebookLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Facebook",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(linkedinLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Linkedin",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(youtubeLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Youtube",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(twitterLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Twitter",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(githubLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Github",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final Uri url = Uri.parse(tiktokLink);
+                            await launchUrl(url);
+                          },
+                          child: Text(
+                            "Tiktok",
+                            style: kSubTitleText.copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
             ),
             const SizedBox(
               height: 20,

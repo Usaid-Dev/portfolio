@@ -29,6 +29,14 @@ People of the World! I'm Usaid, an experienced software developer specializing i
 String location = "Karachi, Pakistan";
 String email = "usaidasif12@gmail.com";
 
+String instagramLink = 'https://www.instagram.com/usaid.__.asif/';
+String facebookLink = 'https://www.facebook.com/profile.php?id=100008966911124';
+String linkedinLink = 'https://www.linkedin.com/in/usaid-asif-dev/';
+String youtubeLink = 'https://www.youtube.com/channel/UCJ88-enouCaFaOCWhhKrUhw';
+String twitterLink = 'https://twitter.com/Usaid__Asif';
+String githubLink = 'https://github.com/Usaid-Dev';
+String tiktokLink = 'https://www.tiktok.com/@usaid_asif';
+
 List<Project> projectList = [
   Project(
     name: "Google Map",
